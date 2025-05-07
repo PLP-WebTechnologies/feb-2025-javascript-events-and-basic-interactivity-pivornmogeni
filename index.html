@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Page</h1>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="section" id="event-section">
+            <h2>Event Handling 🎈</h2>
+            
+            <div class="event-box">
+                <button id="click-button" class="event-button">Click Me!</button>
+                <p id="click-output">Button not clicked yet</p>
+            </div>
+            
+            <div class="event-box hover-box">
+                <p id="hover-output">Hover over this box</p>
+            </div>
+            
+            <div class="event-box">
+                <input type="text" id="keypress-input" placeholder="Type something...">
+                <p id="keypress-output">No keypress detected yet</p>
+            </div>
+            
+            <div class="event-box secret-box">
+                <p id="secret-output">Find the secret action! (hint: try double-click or long press)</p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="section" id="interactive-section">
+            <h2>Interactive Elements 🎮</h2>
+            
+            <div class="interactive-box">
+                <button id="color-changer" class="interactive-button">Change My Color</button>
+            </div>
+            
+            <div class="interactive-box">
+                <div class="image-gallery">
+                    <img id="gallery-image" src="https://picsum.photos/id/10/400/300" alt="Gallery image">
+                    <div class="gallery-controls">
+                        <button id="prev-btn" class="gallery-button">Previous</button>
+                        <button id="next-btn" class="gallery-button">Next</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interactive-box">
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">Tab 1</button>
+                        <button class="tab-button" data-tab="tab2">Tab 2</button>
+                        <button class="tab-button" data-tab="tab3">Tab 3</button>
+                    </div>
+                    <div class="tab-content active" id="tab1">
+                        <h3>Content for Tab 1</h3>
+                        <p>This is the first tab content. It appears by default.</p>
+                    </div>
+                    <div class="tab-content" id="tab2">
+                        <h3>Content for Tab 2</h3>
+                        <p>This content appears when you click the second tab.</p>
+                    </div>
+                    <div class="tab-content" id="tab3">
+                        <h3>Content for Tab 3</h3>
+                        <p>This content appears when you click the third tab.</p>
+                        <div class="animated-box"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="section" id="form-section">
+            <h2>Form Validation 📋</h2>
+            
+            <form id="validation-form">
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error-message" id="name-error"></span>
+                    <span class="real-time-feedback" id="name-feedback"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <span class="error-message" id="email-error"></span>
+                    <span class="real-time-feedback" id="email-feedback"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 characters):</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message" id="password-error"></span>
+                    <span class="real-time-feedback" id="password-feedback"></span>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Password Strength</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+            
+            <div id="form-success" class="success-message">
+                Form submitted successfully!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with HTML, CSS, and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
